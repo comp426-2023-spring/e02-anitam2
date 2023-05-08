@@ -63,13 +63,13 @@ function main(){
         })
       });
     
-    //   document.getElementById("rplsRadio").addEventListener('click', (event) => {
-    //     console.log("onclick works")
-    //     const views = ["rockView","scissorView","paperView","lizardView","spockView"];
-    //     views.forEach(view => {
-    //         document.getElementById(view).style.display ="inline";
-    //     })
-    //   })
+      document.getElementById("rplsRadio").addEventListener('click', (event) => {
+        console.log("onclick works")
+        const views = ["rockView","scissorView","paperView","lizardView","spockView"];
+        views.forEach(view => {
+            document.getElementById(view).style.display ="inline";
+        })
+      })
     
       document.getElementById('refreshButton').addEventListener('click', () => {
         window.location.reload();
