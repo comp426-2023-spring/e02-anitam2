@@ -25,31 +25,31 @@ function main(){
         return selectedValue;
         }
     
-        if (rpsRadio.checked) {
-            console.log("rps was selected")
-            fetch('/app/rps/play?shot=' + getSelectedShootValue(), {
-                method: 'GET',
-            })
-            .then(res => res.json()) // Parse the response as JSON and return a new Promise
-            .then(data => {
-                console.log(data);
-                const result = data["result"];
-                const resultDiv = document.getElementById("result");
-                resultDiv.innerText = result;
-                resultDiv.style.display = "inline";
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+    //     if (rpsRadio.checked) {
+    //         console.log("rps was selected")
+    //         fetch('/app/rps/play?shot=' + getSelectedShootValue(), {
+    //             method: 'GET',
+    //         })
+    //         .then(res => res.json()) // Parse the response as JSON and return a new Promise
+    //         .then(data => {
+    //             console.log(data);
+    //             const result = data["result"];
+    //             const resultDiv = document.getElementById("result");
+    //             resultDiv.innerText = result;
+    //             resultDiv.style.display = "inline";
+    //         })
+    //         .catch(error => {
+    //             console.error('Error:', error);
+    //         });
             
             
-        } else if (rplsRadio.checked) {
-            console.log("rpls was selected")
-          window.location.href = '/app/rpsls';
-        } else {
-          alert('Please select a game mode.');
-        }
-      });
+    //     } else if (rplsRadio.checked) {
+    //         console.log("rpls was selected")
+    //       window.location.href = '/app/rpsls';
+    //     } else {
+    //       alert('Please select a game mode.');
+    //     }
+    //   });
     
       document.getElementById("rpsRadio").addEventListener('click', (event) => {
         console.log("onclick works")
