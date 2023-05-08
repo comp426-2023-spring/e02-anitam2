@@ -17,8 +17,8 @@ function main(){
     
         for (let i = 0; i < shootRadioButtons.length; i++) {
             if (shootRadioButtons[i].checked) {
-            selectedValue = shootRadioButtons[i].value;
-            break;
+                selectedValue = shootRadioButtons[i].value;
+                break;
             }
         }
     
@@ -41,14 +41,17 @@ function main(){
             .catch(error => {
                 console.error('Error:', error);
             });
-            
-            
-        } else if (rplsRadio.checked) {
+        } 
+
+        else if (rplsRadio.checked) {
             console.log("rpls was selected")
-          window.location.href = '/app/rpsls';
-        } else {
-          alert('Please select a game mode.');
+            window.location.href = '/app/rpsls';
+        } 
+
+        else {
+            alert('Please select a game mode.');
         }
+        
       });
     
       document.getElementById("rpsRadio").addEventListener('click', (event) => {
@@ -73,7 +76,7 @@ function main(){
     
       document.getElementById('refreshButton').addEventListener('click', () => {
         window.location.reload();
-      });
+    });
     
     
 }
