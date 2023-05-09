@@ -10,7 +10,6 @@ function main(){
         const rpsRadio = document.getElementById('rpsRadio');
         const rplsRadio = document.getElementById('rplsRadio');
         
-    
         function getSelectedShootValue() {
         const shootRadioButtons = document.getElementsByName('shoot');
         let selectedValue;
@@ -51,7 +50,7 @@ function main(){
         else {
             alert('Please select a game mode.');
         }
-        
+
       });
     
       document.getElementById("rpsRadio").addEventListener('click', (event) => {

@@ -43,6 +43,7 @@ import express from 'express'
 // https://flaviocopes.com/fix-dirname-not-defined-es-module-scope/
 import path from 'path'
 import { fileURLToPath } from 'url'
+
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Load dependencies for logging
@@ -62,7 +63,7 @@ const app = express()
 // Set a port for the server to listen on
 const port = args.port || args.p || process.env.PORT || 8080
 // Load app middleware here to serve routes, accept data requests, etc.
-//
+
 // Create and update access log
 // The morgan format below is the Apache Foundation combined format but with ISO8601 dates
 app.use(morgan(':remote-addr - :remote-user [:date[iso]] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"',
@@ -96,9 +97,9 @@ process.on('SIGINT', () => {
         let stoppedlog = new Date().toISOString() + ' HTTP server stopped\n'
 // Log server stop to file
         fs.appendFileSync(path.join(logpath, 'server.log'), stoppedlog)
-// Debug echo stop log entry to STDOUT
-        if (args.debug) {
-            console.info('\n' + stoppedlog)
-        }    
-    })
-})
+// // Debug echo stop log entry to STDOUT
+//         if (args.debug) {
+//             console.info('\n' + stoppedlog)
+//         }    
+//     })
+// })
