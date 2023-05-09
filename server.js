@@ -97,9 +97,9 @@ process.on('SIGINT', () => {
         let stoppedlog = new Date().toISOString() + ' HTTP server stopped\n'
 // Log server stop to file
         fs.appendFileSync(path.join(logpath, 'server.log'), stoppedlog)
-// // Debug echo stop log entry to STDOUT
-//         if (args.debug) {
-//             console.info('\n' + stoppedlog)
-//         }    
-//     })
-// })
+// Debug echo stop log entry to STDOUT
+        if (args.debug) {
+            console.info('\n' + stoppedlog)
+        }    
+    })
+})
